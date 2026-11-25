@@ -102,7 +102,20 @@ vim picorv32.c
 <<<<<<< HEAD
 ```
 
-This command launches Vim and loads `picorv32.c` into the editor. It does not compile or execute the file. The purpose of this step is to inspect the processor source, navigate through its implementation, and identify the code relevant to the lecture/lab.
+This command launches Vim and loads picorv32.c into the editor. It does not compile or execute the file. The purpose of this step is to inspect the processor source, navigate through its implementation, and identify the code relevant to the lecture/lab.
+
+In Vim:
+
+Use arrow keys or h, j, k, l to navigate.
+
+Press Esc to return to normal mode.
+
+Type :q and press Enter to quit if no changes were made.
+
+If changes were made and you want to save, use :wq to write and quit.
+
+Result: the file's source code is displayed in Vim for inspection. The screenshot documents the code opened in the editor; it is not program output.
+
 =======
 ```
 This command launches Vim and loads `picorv32.c` into the editor. It does not compile or execute the file. The purpose of this step is to inspect the processor source, navigate through its implementation, and identify the code relevant to the lecture/lab.
@@ -120,11 +133,16 @@ Open the testbench source:
 ```bash
 vim testbench.c
 ```
-This loads `testbench.c` into Vim for reading or editing. A testbench is used as a verification environment: it typically provides inputs or test scenarios to a design and observes the behavior to check whether the expected results occur. The exact details should be interpreted from the code visible in this screenshot.
+This loads testbench.c into Vim for reading or editing. A testbench is used as a verification environment: it typically provides inputs or test scenarios to a design and observes the behavior to check whether the expected results occur. The exact details should be interpreted from the code visible in this screenshot.
+
 Result: Vim displays the testbench source code so its structure and test logic can be reviewed. Opening the file alone does not start a simulation or produce pass/fail output.
+
 Identify how the test is set up.
+
 Look for input/stimulus generation and checks or expected values, if present in the code.
-Exit with `:q` if unchanged, or save and exit with `:wq` if you edited it.
+
+Exit with :q if unchanged, or save and exit with :wq if you edited it.
+
 ![testbench.c opened in Vim](images/Day_2.6.png)
 ---
 8. Day 2 Summary
