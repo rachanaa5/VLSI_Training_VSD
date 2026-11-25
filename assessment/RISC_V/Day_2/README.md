@@ -1,5 +1,7 @@
 Day 2 — ABI Function Calls Using C and RISC-V Assembly
+
 Day 2 explores the Application Binary Interface (ABI) by calling an assembly function from a C program. Instead of calculating the sum inside the C loop, the C program passes arguments to `load()` and the assembly function performs the summation.
+
 1. C Program — Calling an Assembly Function
 The C program declares `load()` as an external function. It passes the starting value and upper limit as arguments, receives the return value, and prints the sum.
 ```c
@@ -83,7 +85,7 @@ After compiling, inspect the machine code and its corresponding RISC-V assembly 
 
 ```bash
 riscv64-unknown-elf-objdump -d 1to9_custom.o | less
-```
+**```
 `objdump` displays information from the compiled object file.
 `-d` disassembles executable sections and shows assembly instructions.
 `1to9_custom.o` is the compiled object/executable being inspected.
@@ -96,8 +98,7 @@ What to observe: the function labels, instruction addresses, and instructions ge
 Open the processor source file in Vim:
 ```bash
 vim picorv32.c
-```
-This command launches Vim and loads `picorv32.c` into the editor. It does not compile or execute the file. The purpose of this step is to inspect the processor source, navigate through its implementation, and identify the code relevant to the lecture/lab.
+```This command launches Vim and loads `picorv32.c` into the editor. It does not compile or execute the file. The purpose of this step is to inspect the processor source, navigate through its implementation, and identify the code relevant to the lecture/lab.
 In Vim:
 Use arrow keys or `h`, `j`, `k`, `l` to navigate.
 Press `Esc` to return to normal mode.
@@ -110,13 +111,12 @@ Result: the file's source code is displayed in Vim for inspection. The screensho
 Open the testbench source:
 ```bash
 vim testbench.c
-```
-This loads `testbench.c` into Vim for reading or editing. A testbench is used as a verification environment: it typically provides inputs or test scenarios to a design and observes the behavior to check whether the expected results occur. The exact details should be interpreted from the code visible in this screenshot.
+```This loads `testbench.c` into Vim for reading or editing. A testbench is used as a verification environment: it typically provides inputs or test scenarios to a design and observes the behavior to check whether the expected results occur. The exact details should be interpreted from the code visible in this screenshot.
 Result: Vim displays the testbench source code so its structure and test logic can be reviewed. Opening the file alone does not start a simulation or produce pass/fail output.
 Identify how the test is set up.
 Look for input/stimulus generation and checks or expected values, if present in the code.
 Exit with `:q` if unchanged, or save and exit with `:wq` if you edited it.
 ![testbench.c opened in Vim](images/Day_2.6.png)
----
+---**
 8. Day 2 Summary
 This work demonstrates the C-to-assembly function call and ABI argument/return handling, running the program in Spike, inspecting the compiled instructions with `objdump`, and opening processor/testbench source files for code review. The `objdump` and Vim steps are inspection activities: they help you understand the generated instructions and source files, while the Spike command is the step that runs the compiled program and shows its result.
