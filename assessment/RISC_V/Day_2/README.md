@@ -118,23 +118,6 @@ If changes were made and you want to save, use :wq to write and quit.
 
 Result: the file's source code is displayed in Vim for inspection. The screenshot documents the code opened in the editor; it is not program output.
 
-=======
-```
-This command launches Vim and loads `picorv32.c` into the editor. It does not compile or execute the file. The purpose of this step is to inspect the processor source, navigate through its implementation, and identify the code relevant to the lecture/lab.
->>>>>>> 4a4f3e32a351d5877642a9e72cef32e4d3ad98be
-In Vim:
-Use arrow keys or `h`, `j`, `k`, `l` to navigate.
-Press `Esc` to return to normal mode.
-Type `:q` and press Enter to quit if no changes were made.
-If changes were made and you want to save, use `:wq` to write and quit.
-Result: the file's source code is displayed in Vim for inspection. The screenshot documents the code opened in the editor; it is not program output.
-![picorv32.c opened in Vim](images/Day_2.5.png)
----
-7. Inspecting `testbench.c` with Vim
-Open the testbench source:
-```bash
-vim testbench.c
-```
 
 7. Inspecting testbench.c with Vim
 Open the testbench source:
