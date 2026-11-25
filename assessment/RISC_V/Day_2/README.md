@@ -87,15 +87,17 @@ After compiling, inspect the machine code and its corresponding RISC-V assembly 
 
 riscv64-unknown-elf-objdump -d 1to9_custom.o | less
 **```
-`objdump` displays information from the compiled object file.
-`-d` disassembles executable sections and shows assembly instructions.
-`1to9_custom.o` is the compiled object/executable being inspected.
-`| less` opens the output in a scrollable viewer so long disassembly listings can be examined page by page.
-Use the arrow keys or Page Up/Page Down to scroll, and press `q` to exit `less`.
-What to observe: the function labels, instruction addresses, and instructions generated for the program. Disassembly helps connect the C/assembly source to the machine-level instruction sequence.
+
+```
+objdump displays information from the compiled object file.-d disassembles executable sections and shows assembly instructions.1to9_custom.o is the compiled object/executable being inspected.| less opens the output in a scrollable viewer so long disassembly listings can be examined page by page.
+Use the arrow keys or Page Up/Page Down to scroll, and press q to exit less.
+What to observe: the function labels, instruction addresses, and instructions generated for the program. Disassembly helps connect the C/assembly source to the machine-level instruction sequence
+
 ![Objdump disassembly](images/Day_2.4.png)
 ---
-6. Inspecting `picorv32.c` with Vim
+
+
+6. Inspecting picorv32.c with Vim
 Open the processor source file in Vim:
 ```bash
 vim picorv32.c
@@ -133,6 +135,13 @@ Open the testbench source:
 ```bash
 vim testbench.c
 ```
+
+7. Inspecting testbench.c with Vim
+Open the testbench source:
+```bash
+vim testbench.c
+```
+
 This loads testbench.c into Vim for reading or editing. A testbench is used as a verification environment: it typically provides inputs or test scenarios to a design and observes the behavior to check whether the expected results occur. The exact details should be interpreted from the code visible in this screenshot.
 
 Result: Vim displays the testbench source code so its structure and test logic can be reviewed. Opening the file alone does not start a simulation or produce pass/fail output.
