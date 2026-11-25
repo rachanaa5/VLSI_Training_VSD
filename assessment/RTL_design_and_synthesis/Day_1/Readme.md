@@ -28,7 +28,9 @@ Verilog RTL (.v) + Testbench (tb_*.v)
                 ↓
    Gate-Level Netlist & Schematic (sky130_fd_sc_hd)
 
-   Design vs. Testbench:
+
+
+Design vs. Testbench:
 
 The Design Under Test (DUT) (good_mux.v) contains synthesizable behavioral hardware logic (always @(*)).
 
