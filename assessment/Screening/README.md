@@ -117,4 +117,4 @@ drc why
 save inverter.mag
 ```
 
-![Inverter Magic Layout](inverter_magic_layout.png)
+![Inverter Magic Layout](inverter_magic_layout1.png)
